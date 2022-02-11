@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+section#content{
+    width: 1000px;
+    margin: auto;
+}
+
+section#content img{
+    width: 500px;
+}
+
+iframe#frame-spec{
+    width: 450px;
+    height: 309px;
+    border: none;
+}
+
+iframe#frame-spec::-webkit-scrollbar{
+    display: none;
+}

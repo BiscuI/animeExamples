@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+
+    <link rel="shortcut icon" href="img/dbz.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/indexStyle.css">
+    <link rel="stylesheet" href="style/sobreStyle.css">
+</head>
+
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Covil Covarde</h1>
+            </hgroup>
+
+            <img src="img/nino.png" alt="nino nakano" id="homeIcon">
+
+
+            <nav id="menu">
+                <h1>Menu principal</h1>
+                <ul onmouseover="mudar('img/nino.png')">
+                    <li><a href="index.html" onmouseenter="mudar('img/yotsuba.png')">HOME</a></li>
+                    <li><a href="multimidia.html" onmouseenter="mudar('img/itsuki.png')">MULTIMÍDIA</a></li>
+                    <li><a href="animes.html" onmouseenter="mudar('img/ichika.png')">ANIMES</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="contato.html" onmouseenter="mudar('img/miku.png')">FALE CONOSCO</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="corpo-full">
+            <article id="artigo-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>AKAME GA KILL</h3>
+                        <h1>Exibição interativa dos personagens</h1>
+                        <h2>Por Pablo Santos</h2>
+                        <h3 class="direita">Atualizado em 03/02/2022</h3>
+                    </hgroup>
+                </header>
+                <p>Clique nos personagens da <b>Night Raid</b> para obter mais informações</p>
+
+                <section id="content">
+                    <img src="img/agk.png" alt="Night Raid" usemap="#mapa">
+                    <map name="mapa">
+                        <area shape="rect" coords="0,0,56,308" href="akg.html#akame" target="janela">
+                        <area shape="rect" coords="60, 0, 115, 308" href="akg.html#tatsumi" target="janela">
+                        <area shape="rect" coords="118, 0, 174, 308" href="akg.html#mine" target="janela">
+                        <area shape="rect" coords="175, 0, 232, 308" href="akg.html#leone" target="janela">
+                        <area shape="rect" coords="235, 0, 289, 308" href="akg.html#sheele" target="janela">
+                        <area shape="rect" coords="352, 0, 407, 308" href="akg.html#lubbock" target="janela">
+                        <area shape="rect" coords="411,, 0, 467, 308" href="akg.html#chelsea" target="janela">
+                    </map>
+
+                    <iframe src="akg.html" frameborder="0" name="janela" id="frame-spec"></iframe>
+                </section>
+            </article>
+        </section>
+        <footer id="rodape">&copy; by LePablords</footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

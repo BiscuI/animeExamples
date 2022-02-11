@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+
+    <link rel="shortcut icon" href="img/dbz.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/indexStyle.css">
+    <link rel="stylesheet" href="style/forms.css">
+</head>
+
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Covil Covarde</h1>
+            </hgroup>
+
+            <img src="img/miku.png" alt="miku nakano" id="homeIcon">
+
+
+            <nav id="menu">
+                <h1>Menu principal</h1>
+                <ul onmouseover="mudar('img/miku.png')">
+                    <li><a href="index.html" onmouseenter="mudar('img/yotsuba.png')">HOME</a></li>
+                    <li><a href="multimidia.html" onmouseenter="mudar('img/itsuki.png')">MULTIMÍDIA</a></li>
+                    <li><a href="animes.html" onmouseenter="mudar('img/ichika.png')">ANIMES</a></li>
+                    <li><a href="sobre.html" onmouseenter="mudar('img/nino.png')">SOBRE</a></li>
+                    <li><a href="contato.html">FALE CONOSCO</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="corpo-full">
+            <article id="artigo-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Dúvidas? Sugestões?</h3>
+                        <h1>Entre em contato conosco</h1>
+                        <h2>Por Pablo Santos</h2>
+                        <h3 class="direita">Atualizado em 03/02/2022</h3>
+                    </hgroup>
+                </header>
+
+                <form action="mailto:pablo_obitox@hotmail.com" method="post" id="form">
+                    <fieldset id="usuario">
+                        <legend>Dados do Fedido</legend>
+                        <p><label for="nome">Nome:</label> <input type="text" name="nome" id="nome" maxlength="30"></p>
+                        <p><label for="senha">Senha:</label> <input type="password" name="senha" id="senha"
+                                minlength="4" maxlength="10"></p>
+                        <p><label for="email">Email:</label> <input type="email" name="email" id="email"></p>
+
+                        <fieldset>
+                            <legend>Sexo</legend>
+                            <input type="radio" name="sexo" id="masc">
+                            <label for="masc">Masculino</label>
+
+                            <input type="radio" name="sexo" id="fem">
+                            <label for="fem">Feminino</label>
+
+                            <input type="radio" name="sexo" id="lgbt" disabled>
+                            <label for="lgbt">Outro</label>
+                        </fieldset>
+
+                        <p><label for="nasc">Data de Nascimento:</label> <input type="date" name="nasc" id="nasc"> </p>
+                    </fieldset>
+
+                    <fieldset id="endereco">
+                        <legend>Endereço do Fedido</legend>
+
+                        <p><label for="logradouro">Rua:</label> <input type="text" name="logradouro" id="logradouro"
+                                placeholder="Rua, travessa, etc..."></p>
+                        <p><label for="numero">Número</label>
+                            <input type="text" name="numero" id="numero" placeholder="Número da casa ou apartamento">
+                        </p>
+
+
+                        <p><label for="estado">Estado:</label>
+                            <select name="estado" id="estado">
+                                <optgroup label="Região Nordeste">
+                                    <option value="rn">Rio Grande do Norte</option>
+                                    <option value="ce">Ceará</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="se">Santa Catarina</option>
+                                    <option value="pb">Paraná</option>
+                                </optgroup>
+                                <optgroup label="Região Centro-Oeste">
+                                    <option value="ba">Minas Gerais</option>
+                                </optgroup>
+
+                            </select>
+                        </p>
+                        <p><label for="cidade">Cidade:</label><input type="text" name="cidade" id="cidade"
+                                placeholder="Digite o nome da sua cidade" list="dl-cidade"></p>
+                        <datalist id="dl-cidade">
+                            <option value="Natal"></option>
+                            <option value="Mossoro"></option>
+                        </datalist>
+
+                    </fieldset>
+
+                    <fieldset id="sugestao">
+                        <legend>Quero Sugerir Algo</legend>
+
+                        <p><label for="sugestao">Sugestão:</label>
+                            <textarea name="sugestao" id="sugestao" placeholder="Fala tu, viado"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <fieldset id="fibonacci">
+                        <legend>Quero uma Sequência Fibonacci</legend>
+
+                        <p><label for="fiboNumber">Termos:</label><input
+                                type="number" name="fiboNumber" id="fiboNumber" placeholder="Quantidade de termos"></p>
+                    </fieldset>
+
+                    <fieldset id="anao">
+                        <legend>Quero Comprar um Anão</legend>
+
+                        <p><input type="checkbox" name="check-anao" id="check-anao">
+                            <label for="check-anao">Gostaria de encomendar o próximo anão disponível</label></p>
+                        <p><label for="range-anao">Qual o tamanho aparente do anão</label>
+                            <input type="range" name="range-anao" id="range-anao" min="0" max="140" step="2">
+                        </p>
+                        <p><label for="cor-anao">Cor:</label><input type="color" name="cor-anao" id="cor-anao"></p>
+                        <p></p>
+                        <p></p>
+                    </fieldset>
+
+                    <input type="button" value="ENVIAR" onclick="enviar()">
+                </form>
+            </article>
+        </section>
+
+        <footer id="rodape">&copy; by LePablords</footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
